@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="0" failed="0" skipped="3">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-10T19:00:31 IST" name="Amazon Suite" finished-at="2025-07-10T19:00:33 IST" duration-ms="1341">
+    <groups>
+    </groups>
+    <test started-at="2025-07-10T19:00:31 IST" name="FirefoxTest" finished-at="2025-07-10T19:00:33 IST" duration-ms="1341">
+      <class name="Amazon.Automation.AmazonTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Amazon.Automation.AmazonTest@23348b5d]" started-at="2025-07-10T19:00:31 IST" name="setUp" finished-at="2025-07-10T19:00:32 IST" duration-ms="1085" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}]}]
+Capabilities {browserName: firefox}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}]}]
+Capabilities {browserName: firefox}
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:151)
+at Amazon.Automation.BaseTest.setUp(BaseTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+... 4 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:873)
+at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:961)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAmazonHomePage()[pri:0, instance:Amazon.Automation.AmazonTest@23348b5d]" started-at="2025-07-10T19:00:32 IST" name="verifyAmazonHomePage" finished-at="2025-07-10T19:00:32 IST" duration-ms="7" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}]}]
+Capabilities {browserName: firefox}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}]}]
+Capabilities {browserName: firefox}
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:151)
+at Amazon.Automation.BaseTest.setUp(BaseTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+... 4 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:873)
+at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:961)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAmazonHomePage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.Automation.AmazonTest@23348b5d]" started-at="2025-07-10T19:00:32 IST" name="tearDown" finished-at="2025-07-10T19:00:32 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Amazon.Automation.AmazonTest -->
+    </test> <!-- FirefoxTest -->
+    <test started-at="2025-07-10T19:00:31 IST" name="ChromeTest" finished-at="2025-07-10T19:00:32 IST" duration-ms="1323">
+      <class name="Amazon.Automation.AmazonTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Amazon.Automation.AmazonTest@5bf0d49]" started-at="2025-07-10T19:00:31 IST" name="setUp" finished-at="2025-07-10T19:00:32 IST" duration-ms="1087" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
+Capabilities {browserName: chrome}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
+Capabilities {browserName: chrome}
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:151)
+at Amazon.Automation.BaseTest.setUp(BaseTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+... 4 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:873)
+at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:961)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAmazonHomePage()[pri:0, instance:Amazon.Automation.AmazonTest@5bf0d49]" started-at="2025-07-10T19:00:32 IST" name="verifyAmazonHomePage" finished-at="2025-07-10T19:00:32 IST" duration-ms="1" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
+Capabilities {browserName: chrome}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
+Capabilities {browserName: chrome}
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:151)
+at Amazon.Automation.BaseTest.setUp(BaseTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+... 4 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:873)
+at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:961)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAmazonHomePage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.Automation.AmazonTest@5bf0d49]" started-at="2025-07-10T19:00:32 IST" name="tearDown" finished-at="2025-07-10T19:00:32 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Amazon.Automation.AmazonTest -->
+    </test> <!-- ChromeTest -->
+    <test started-at="2025-07-10T19:00:31 IST" name="EdgeTest" finished-at="2025-07-10T19:00:32 IST" duration-ms="1332">
+      <class name="Amazon.Automation.AmazonTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Amazon.Automation.AmazonTest@37ceb1df]" started-at="2025-07-10T19:00:31 IST" name="setUp" finished-at="2025-07-10T19:00:32 IST" duration-ms="1085" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge}]}]
+Capabilities {browserName: MicrosoftEdge}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge}]}]
+Capabilities {browserName: MicrosoftEdge}
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:151)
+at Amazon.Automation.BaseTest.setUp(BaseTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+... 4 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:873)
+at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:961)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAmazonHomePage()[pri:0, instance:Amazon.Automation.AmazonTest@37ceb1df]" started-at="2025-07-10T19:00:32 IST" name="verifyAmazonHomePage" finished-at="2025-07-10T19:00:32 IST" duration-ms="3" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge}]}]
+Capabilities {browserName: MicrosoftEdge}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-9O8MS6L0', ip: '172.17.192.1'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge}]}]
+Capabilities {browserName: MicrosoftEdge}
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:151)
+at Amazon.Automation.BaseTest.setUp(BaseTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+... 4 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:873)
+at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:961)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAmazonHomePage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.Automation.AmazonTest@37ceb1df]" started-at="2025-07-10T19:00:32 IST" name="tearDown" finished-at="2025-07-10T19:00:32 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Amazon.Automation.AmazonTest -->
+    </test> <!-- EdgeTest -->
+  </suite> <!-- Amazon Suite -->
+</testng-results>
