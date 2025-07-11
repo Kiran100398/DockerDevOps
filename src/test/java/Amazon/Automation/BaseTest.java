@@ -1,44 +1,61 @@
 package Amazon.Automation;
 
-import java.net.URL;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Parameters;
 
+import java.net.URL;
 
-
-
-
-/**
- * Hello world!
- */
 public class BaseTest {
-	 protected WebDriver driver;
 
-	    @Parameters("browser")
-	    @BeforeMethod
-	    public void setUp(String browser) throws Exception {
-	        DesiredCapabilities capabilities = new DesiredCapabilities();
-	        if (browser.equalsIgnoreCase("chrome")) {
-	            capabilities.setBrowserName("chrome");
-	        } else if (browser.equalsIgnoreCase("firefox")) {
-	            capabilities.setBrowserName("firefox");
-	        } else if (browser.equalsIgnoreCase("edge")) {
-	            capabilities.setBrowserName("MicrosoftEdge");
-	        }
+    protected WebDriver driver;
 
-	        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-	    }
+    @Parameters("browser")
+    @BeforeMethod
+    public void setUp(String browser) throws Exception {
+        URL gridUrl = new URL("http://localhost:4444/wd/hub");
 
-	    @AfterMethod
-	    public void tearDown() {
-	        if (driver != null) {
-	            driver.quit();
-	        }
-	    }
+        switch (browser.toLowerCase()) {
+            case "chrome":
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless=new");
+                chromeOptions.addArguments("--disable-gpu");
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--disable-dev-shm-usage");
+                driver = new RemoteWebDriver(gridUrl, chromeOptions);
+                break;
+
+            case "firefox":
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("--headless");
+                driver = new RemoteWebDriver(gridUrl, firefoxOptions);
+                break;
+
+            case "edge":
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless=new");
+                edgeOptions.addArguments("--disable-gpu");
+                edgeOptions.addArguments("--no-sandbox");
+                edgeOptions.addArguments("--disable-dev-shm-usage");
+                driver = new RemoteWebDriver(gridUrl, edgeOptions);
+                break;
+
+            default:
+                throw new IllegalArgumentException("Browser \"" + browser + "\" not supported.");
+        }
+
+        driver.manage().window().maximize();
     }
 
+    @AfterMethod
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+}
