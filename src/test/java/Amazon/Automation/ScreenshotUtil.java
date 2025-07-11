@@ -12,15 +12,13 @@ import java.util.Date;
 
 public class ScreenshotUtil {
 
-    public static void captureScreenshot(WebDriver driver, String methodName) {
+    public static void captureScreenshot(WebDriver driver, String methodName, String status) {
         try {
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            File dest = new File("screenshots/" + methodName + "_" + timestamp + ".png");
+            File dest = new File("screenshots/" + status + "/" + methodName + "_" + timestamp + ".png");
 
-            // Create directory if it doesn't exist
-            dest.getParentFile().mkdirs();
-
+            dest.getParentFile().mkdirs(); // Create dirs if they don't exist
             Files.copy(src.toPath(), dest.toPath());
             System.out.println("📸 Screenshot saved: " + dest.getAbsolutePath());
         } catch (IOException e) {

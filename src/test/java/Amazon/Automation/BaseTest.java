@@ -56,11 +56,14 @@ public class BaseTest {
     @AfterMethod
     public void tearDown(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
-            ScreenshotUtil.captureScreenshot(driver, result.getName());
+            ScreenshotUtil.captureScreenshot(driver, result.getName(), "FAIL");
+        } else if (result.getStatus() == ITestResult.SUCCESS) {
+            ScreenshotUtil.captureScreenshot(driver, result.getName(), "PASS");
         }
 
         if (driver != null) {
             driver.quit();
         }
     }
+   
 }
